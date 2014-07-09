@@ -52,3 +52,5 @@ gem 'spree_bootstrap_frontend', github: '200Creative/spree_bootstrap_frontend', 
 gem 'spree_static_content', github: 'spree/spree_static_content', branch: '2-2-stable'
 gem 'spree_blogging_spree', github: 'stefansenk/spree-blogging-spree', branch: '2-2-stable'
 
+gem 'spree_editor', :path => 'vendor/extensions'
+gem 'ckeditor', '~> 4.0.11'
