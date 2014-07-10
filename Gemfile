@@ -60,3 +60,5 @@ gem 'spree_sitemap', github: 'jdutil/spree_sitemap', branch: '2-2-stable'
 gem 'whenever', :require => false
 
 gem 'spree_simple_sales', :path => 'vendor/extensions'
+
+gem 'spree_banner', :path => 'vendor/extensions'

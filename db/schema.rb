@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140710062239) do
+ActiveRecord::Schema.define(version: 20140710105619) do
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -84,6 +84,22 @@ ActiveRecord::Schema.define(version: 20140710062239) do
 
   add_index "spree_assets", ["viewable_id"], name: "index_assets_on_viewable_id"
   add_index "spree_assets", ["viewable_type", "type"], name: "index_assets_on_viewable_type_and_type"
+
+  create_table "spree_banner_boxes", force: true do |t|
+    t.string   "alt_text"
+    t.string   "url"
+    t.string   "category"
+    t.integer  "position"
+    t.boolean  "enabled",                 default: false
+    t.string   "attachment_content_type"
+    t.string   "attachment_file_name"
+    t.datetime "attachment_updated_at"
+    t.integer  "attachment_width"
+    t.integer  "attachment_height"
+    t.integer  "attachment_size"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_blog_entries", force: true do |t|
     t.string   "title"
