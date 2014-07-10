@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/200Creative/spree_bootstrap_frontend.git
-  revision: 2c017fe1a0d0eca7d3616e10308589d158683083
+  revision: 10c890cd6ee9e5d1900aa0a8b6fafc75759bad57
   branch: 2-2-stable
   specs:
     spree_bootstrap_frontend (2.2.0)
@@ -17,6 +17,14 @@ GIT
     spree_sitemap (2.0.0.beta)
       sitemap_generator (~> 4.3.1)
       spree_core (~> 2.2.0)
+
+GIT
+  remote: git://github.com/junyuenlim/spree_simple_sales.git
+  revision: 59a1d222caf2ec8680f45166c47f5c729c73a036
+  branch: master
+  specs:
+    spree_simple_sales (2.2.2)
+      spree_core (~> 2.2.2)
 
 GIT
   remote: git://github.com/radar/better_spree_paypal_express.git
@@ -46,7 +54,7 @@ GIT
 
 GIT
   remote: https://github.com/spree/spree_auth_devise.git
-  revision: 81a0fbb2db15efbbb50d0d139bbc41aee7fa58a1
+  revision: 7df9bd10befba6dee256df6cee5a01673b18dd55
   branch: 2-2-stable
   specs:
     spree_auth_devise (2.2.0)
@@ -59,7 +67,7 @@ GIT
 
 GIT
   remote: https://github.com/spree/spree_gateway.git
-  revision: ea9dd046848523c79845abbd5462f5e13941276e
+  revision: ade503d0b5d1958b4441cb2313cc61be41724549
   branch: 2-2-stable
   specs:
     spree_gateway (2.2.1)
@@ -72,8 +80,6 @@ PATH
       ckeditor (= 4.0.11)
       spree_backend (~> 2.2.0)
       tinymce-rails (~> 3.5.8.3)
-    spree_simple_sales (2.2.2)
-      spree_core (~> 2.2.2)
 
 GEM
   remote: https://rubygems.org/
@@ -118,7 +124,7 @@ GEM
     acts_as_list (0.3.0)
       activerecord (>= 3.0)
     arel (4.0.2)
-    awesome_nested_set (3.0.0.rc.5)
+    awesome_nested_set (3.0.0.rc.6)
       activerecord (>= 4.0.0, < 5)
     aws-sdk (1.27.0)
       json (~> 1.4)
@@ -163,7 +169,7 @@ GEM
     devise-encryptable (0.1.2)
       devise (>= 2.1.0)
     erubis (2.7.0)
-    execjs (2.2.0)
+    execjs (2.2.1)
     ffaker (1.24.0)
     font-awesome-rails (4.1.0.0)
       railties (>= 3.2, < 5.0)
@@ -174,7 +180,7 @@ GEM
     httparty (0.13.1)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
-    i18n (0.6.9)
+    i18n (0.6.11)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
@@ -215,6 +221,7 @@ GEM
       xml-simple
     paypal-sdk-merchant (1.106.1)
       paypal-sdk-core (~> 0.2.3)
+    pg (0.17.1)
     polyamorous (0.6.4)
       activerecord (>= 3.0)
     polyglot (0.3.5)
@@ -234,7 +241,7 @@ GEM
     rails_12factor (0.0.2)
       rails_serve_static_assets
       rails_stdout_logging
-    rails_serve_static_assets (0.0.1)
+    rails_serve_static_assets (0.0.2)
     rails_stdout_logging (0.0.3)
     railties (4.0.5)
       actionpack (= 4.0.5)
@@ -359,6 +366,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
+  pg
   rails (= 4.0.5)
   rails_12factor
   sass-rails (~> 4.0.2)

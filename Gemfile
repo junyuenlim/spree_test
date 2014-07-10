@@ -5,8 +5,14 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.5'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -33,8 +39,6 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
-
-gem 'rails_12factor', group: :production
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -63,6 +67,6 @@ gem 'ckeditor', '~> 4.0.11'
 gem 'spree_sitemap', github: 'jdutil/spree_sitemap', branch: '2-2-stable'
 gem 'whenever', :require => false
 
-gem 'spree_simple_sales', :path => 'vendor/extensions'
+gem 'spree_simple_sales', github: 'junyuenlim/spree_simple_sales', branch: 'master'
 
 gem 'spree_paypal_express', :github => "radar/better_spree_paypal_express", :branch => "2-2-stable"
