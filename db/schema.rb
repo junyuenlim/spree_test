@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140710105619) do
+ActiveRecord::Schema.define(version: 20140710174560) do
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -84,22 +84,6 @@ ActiveRecord::Schema.define(version: 20140710105619) do
 
   add_index "spree_assets", ["viewable_id"], name: "index_assets_on_viewable_id"
   add_index "spree_assets", ["viewable_type", "type"], name: "index_assets_on_viewable_type_and_type"
-
-  create_table "spree_banner_boxes", force: true do |t|
-    t.string   "alt_text"
-    t.string   "url"
-    t.string   "category"
-    t.integer  "position"
-    t.boolean  "enabled",                 default: false
-    t.string   "attachment_content_type"
-    t.string   "attachment_file_name"
-    t.datetime "attachment_updated_at"
-    t.integer  "attachment_width"
-    t.integer  "attachment_height"
-    t.integer  "attachment_size"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "spree_blog_entries", force: true do |t|
     t.string   "title"
@@ -361,6 +345,19 @@ ActiveRecord::Schema.define(version: 20140710105619) do
 
   add_index "spree_payments", ["order_id"], name: "index_spree_payments_on_order_id"
   add_index "spree_payments", ["payment_method_id"], name: "index_spree_payments_on_payment_method_id"
+
+  create_table "spree_paypal_express_checkouts", force: true do |t|
+    t.string   "token"
+    t.string   "payer_id"
+    t.string   "transaction_id"
+    t.string   "state",                 default: "complete"
+    t.string   "refund_transaction_id"
+    t.datetime "refunded_at"
+    t.string   "refund_type"
+    t.datetime "created_at"
+  end
+
+  add_index "spree_paypal_express_checkouts", ["transaction_id"], name: "index_spree_paypal_express_checkouts_on_transaction_id"
 
   create_table "spree_preferences", force: true do |t|
     t.text     "value"
