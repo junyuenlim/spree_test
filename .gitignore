@@ -18,3 +18,4 @@
 # Spree's auto-accept
 /public/spree/
 /public/assets/
+public/sitemap

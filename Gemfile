@@ -54,3 +54,7 @@ gem 'spree_blogging_spree', github: 'stefansenk/spree-blogging-spree', branch: '
 
 gem 'spree_editor', :path => 'vendor/extensions'
 gem 'ckeditor', '~> 4.0.11'
+
+# Sitemap + Cron
+gem 'spree_sitemap', github: 'jdutil/spree_sitemap', branch: '2-2-stable'
+gem 'whenever', :require => false
