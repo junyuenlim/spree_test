@@ -63,6 +63,8 @@ PATH
       ckeditor (= 4.0.11)
       spree_backend (~> 2.2.0)
       tinymce-rails (~> 3.5.8.3)
+    spree_simple_sales (2.2.2)
+      spree_core (~> 2.2.2)
 
 GEM
   remote: https://rubygems.org/
@@ -346,6 +348,7 @@ DEPENDENCIES
   spree_bootstrap_frontend!
   spree_editor!
   spree_gateway!
+  spree_simple_sales!
   spree_sitemap!
   spree_static_content!
   sqlite3

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140709231049) do
+ActiveRecord::Schema.define(version: 20140710062239) do
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -788,6 +788,7 @@ ActiveRecord::Schema.define(version: 20140709231049) do
     t.boolean  "track_inventory",                         default: true
     t.integer  "tax_category_id"
     t.datetime "updated_at"
+    t.decimal  "sale_price",      precision: 8, scale: 2
   end
 
   add_index "spree_variants", ["product_id"], name: "index_spree_variants_on_product_id"
